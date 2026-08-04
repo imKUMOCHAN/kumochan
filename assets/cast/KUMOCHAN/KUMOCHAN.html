@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles.css">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KUMOCHAN</title>
+</head>
+<body>
+    <div id="header-container"></div>
+    <div id="container">
+        <div id="text-content">
+        <h1 style="padding-bottom: 42px; border-bottom: solid 1px #500;">AIKUMO // KUMOCHAN</h1>
+        <div class="text-entry">
+            <h2>General Info</h2>
+            <p>KUMOCHAN is an ambitious girl, with many talents. She is well
+                known for the creation of the facility THEMAN is currently being
+                held in. Her last whereabouts are however unknown.
+            </p>
+        </div>
+        <div class="text-entry">
+            <h2>Occupation</h2>
+            <p>
+                KUMOCHAN has had multiple occupations over the last few years, however
+                just last year she started as a full-time researcher for the various
+                entities currently being kept, and studied at the
+                Creature Research & Containment Facility Inc.
+            </p>
+        </div>
+        <div class="text-entry">
+            <h2>Previous known places of residence</h2>
+            <i>Redcliff, US</i><br>
+            <i>Osaka, JP</i><br>
+            <i>Unknown, NO</i><br>
+            <i>t̷̲̘͑h̶̜͓̑e̷̝̊̓ ̸̩̖̋̋s̸̖̟͑͒ö̷̭͇̈́ù̴̡̫l̷̻͆̿s̵͉͛̉ ̸̻̈o̷̙̩̓͘f̶̙̋ ̵̊͋ͅt̶̬̆̔h̶̰͠ě̷͉͒ ̸̼̒d̶̘̈̕e̴̾̇͜a̷̬̚d̵͎̚ͅ ̴̖͊̎l̷̺̋a̶͈̯̓ù̷̢͗g̸̙̣̕͝h̴̼̤̕ ̸͔͌a̷̯̹͗t̷̙͈͘ ̸̏̚͜t̵͈̫̒͋h̶̝̰̀e̷͍̺̔͠ ̶͓̔w̴̫͔̿i̸̤͊̃c̵̘̓̿k̴̙̬̅̔é̴̲̦d̵̼̈́</i><br>
+        </div>
+        </div>
+        <div id="image-frame">
+        <div class="textbox">Appearance:</div>
+        <div class="appearance-buttons">
+            <button onclick="changeAppearance('current')">Current</button>
+            <button onclick="changeAppearance('defunct')">defunct</button></div>
+        <div id="image-container"> <img src="../../backdrop.png"> </div>
+        <div class="infobox"><span style="opacity: 0.03;">breath,</span> unbeknownst to those who loved her, it was never enouGh. the blood Had dried Before anyone even nOticed a smell. she was murDered by a siCk person..</div>
+                                                                            <!-- GHBODC -->
+        </div>
+        
+    </div>
+</body>
+<style>
+    body {
+        background: url("../../gore/gorebackdropdark.jpg") center;
+        background-size: 666px;
+        background-attachment: fixed;
+    }
+
+    pre {
+        width: 500px;
+        background-color: #500;
+        border: #800;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 12px;
+    }
+
+    h1 {
+        color: #f00;
+        font-size: 50px;
+        font-weight: lighter;
+    }
+
+    #container {
+        display: flex;
+        position: relative;
+        max-width: 1300px;
+        margin: 42px auto;
+        overflow: hidden;
+        background: linear-gradient(0deg, rgba(69, 0, 0) 0%, rgba(57, 0, 0, 0.6) 69%), url("../../gore/gorebackdropdark.jpg") right/cover;
+        border: solid 1px #500;
+        image-rendering: pixelated;
+        backdrop-filter: blur(3px);
+        box-shadow: inset 0px 2px 16px 2px, 0px 3px 19px 2px;
+    }
+
+    #text-content {
+        font-family: 'imprint mt shadow';
+        color: #d11;
+        padding: 10px 21px;
+        box-sizing: border-box;
+        font-size: 20px;
+        max-width: 1060px;
+        text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.3), 0px 4px 8px rgba(0, 0, 0, 0.8), 0px 3px 14px rgba(0, 0, 0, 0.3);
+    }
+
+    @media (max-width: 1360px) {
+        #text-content {
+            max-width: 70%;
+        }
+    }
+
+    #image-frame {
+        width: 220px;
+        box-sizing: border-box;
+        padding: 0px 10px;
+        margin: 0px 20px;
+        border-left: 1px solid #100;
+        right: 1px;
+        position: absolute;
+    }
+
+    #image-container {
+        width: 200px;
+        height: 130px;
+        overflow: hidden;
+        border: 1px solid #100;
+    }
+
+    #image-container img {
+        width: 230px;
+        height: auto;
+        display: block;
+    }
+
+    .appearance-buttons {
+        display: flex;
+        margin: 1px -1px;
+        padding-left: 2px;
+    }
+
+    button {
+        width: 100px;
+        border-radius: 0;
+        color: #e00;
+        outline: inset 2px #500;
+        border: outset 1px #d11;
+        background-color: #500;
+        cursor: url("../images/cursorclick.png"), auto;
+    }
+
+    button:hover {
+        background-color: #600;
+    }
+
+    button.pressed {
+        background-color: #522;
+    }
+
+    .text-entry {
+        border-bottom: solid 1px #900;
+        margin-bottom: 10px;
+        line-height: 33px;
+    }
+
+    .infobox {
+        height: 109px;
+        width: 200px;
+        background: #100a;
+        border: inset 1px #800;
+        color: #e00;
+        box-shadow: #100 0px 5px 7px -5px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px;
+        line-height: 12px;
+    }
+
+    .textbox {
+        height: 19px;
+        width: 200px;
+        background: #e006;
+        border: inset 1px #e00;
+        color: #100;
+        margin-top: 25px;
+        text-align: center;
+        line-height: 1;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 16px;
+    }
+</style>
+<script>
+    function changeAppearance(appearance) {
+      const buttons = document.querySelectorAll('.appearance-buttons button');
+      buttons.forEach(btn => btn.classList.remove('pressed'));
+
+      const image = document.querySelector('#image-container img');
+
+      image.onclick = null;
+      image.style.cursor = '../../cursor.png';
+
+      if (appearance === 'current') {
+        image.src = '../../backdrop.png';
+      } else if (appearance === 'defunct') {
+        image.src = '../../backdropt.png';
+
+        image.onclick = backdropt_click;
+        image,style.cursor = "../../cursorclick.png";
+        }
+
+        const pressedButton = Array.from(buttons)
+            .find(button => button.innerText.toLowerCase().includes(appearance));
+        
+        pressedButton.classList.add('pressed');
+    }
+
+    function backdropt_click() {
+        window.location = "/telephone.html"
+    }
+    const ambbgm = new Audio("../../aud/hellisreal.ogg");
+    ambbgm.play();
+    ambbgm.loop = true;
+
+    fetch('/header.html').then(response => response.text()).then(html => {
+      document.getElementById('header-container').innerHTML = html;
+    }).catch(error => console.error('error fetching header:', error));
+  </script>
+</html>
