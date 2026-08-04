@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OUTSIDE</title>
+</head>
+<body>
+    <div class="image-wrapper">
+        <div class="doorway-image">
+            <img id="doorway-backdrop" src="/assets/hallway.png" draggable="false">
+            <div id="doorway-hotspot" class="clickable" title="Doorway" role="button" tabindex="0" aria-label="Go outside"></div>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        background-color: rgb(42, 0, 0);
+        margin: 0;
+    }
+
+    .image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .doorway-image {
+        position: relative;
+        display: inline-block;
+        line-height: 0;
+    }
+
+    .doorway-image img {
+        display: block;
+        max-width: 90vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+    }
+
+    #doorway-hotspot {
+        position: absolute;
+        left: 42%;
+        top: 36.5%;
+        width: 7.9%;
+        height: 20.6%;
+        cursor: pointer;
+        /* background: rgba(255, 0, 0, 0.3); uncomment to visually check alignment */
+    }
+</style>
+<script>
+    function clickDoorway() {
+        window.location.href = "/theend.html";
+    }
+
+    var doorwayHotspot = document.getElementById("doorway-hotspot");
+    doorwayHotspot.addEventListener("click", clickDoorway);
+    doorwayHotspot.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            clickDoorway();
+        }
+    });
+
+    const ambbgm = new Audio('/assets/aud/lossofwantbackthere.mp3');
+    ambbgm.play();
+    ambbgm.loop = true;
+</script>
+</html>
