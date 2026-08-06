@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/itgoesdeeper/styles.css">
+    <meta name="theme-color" content="#000000">
+    <link rel="icon" type="image/png" href="/itgoesdeeper/assets/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DONT SPEAK OF THE RAPTURE</title>
+</head>
+<body>
+  <script>
+    const ambbgm = new Audio('assets/aud/AMB1.mp3');
+    ambbgm.play();
+    ambbgm.loop = true;
+
+    fetch('/itgoesdeeper/header.html').then(response => response.text()).then(html => {
+      document.getElementById('header-container').innerHTML = html;
+    }).catch(error => console.error('error fetching header:', error));
+  </script>
+</body>
+    <div id="header-container" style="height: 80px"></div>
+    <div class="header-left-img">
+        <a href="click-head-scream.html">
+            <img src="/itgoesdeeper/assets/gore/shaking-mike.gif" style="vertical-align: top;" width="120" height="120" draggable="false" alt="THE PAIN IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS IT BURNS ">
+        </a>
+    </div>
+
+    <div class="cat-text">CHARACTERS</div>
+    <div class="frameframe">
+        <div class="charframe">
+            <a href="/itgoesdeeper/assets/characters/theman/theman.html">
+                <img src="/itgoesdeeper/assets/characters/theman/theman.png" alt="THE MAN">
+            </a>
+            <div class="charTitle">THE MAN</div>
+        </div>
+        <div class="charframe">
+            <a href="/itgoesdeeper/assets/characters/meatball/meatball.html">
+                <img src="/itgoesdeeper/assets/characters/meatball/meatball.png" alt="MEATBALL">
+            </a>
+            <div class="charTitle">MEATBALL</div>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        margin: 0;
+        background: black url("/itgoesdeeper/assets/gore/gorebackdrop.jpg");
+        cursor: url('/itgoesdeeper/assets/cursor.png'), auto; min-height: 908px;
+    }
+
+    a {
+        cursor: url('/itgoesdeeper/assets/cursorclick.png'), auto; 
+    }
+
+    header {
+        position: relative;
+        height: 130px;
+        overflow: visible;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 4px;
+    }
+
+    /* Create two equal columns that sits next to each other */
+    .column {
+        flex: 50%;
+        padding: 0 4px;
+    }
+
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+
+    header::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: black;
+        filter: blur(8px);
+        z-index: -1;
+    }
+
+    h1 {
+        position: absolute;
+        left: 15px;
+        bottom: 12px;
+
+        margin: 0;
+        padding: 4px 8px;
+
+        background: darkred;
+        color: white;
+    }
+
+    .header-left-img {
+        position: absolute;
+        top: 5px;
+        left: 800px;
+
+        height: 80px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #100;
+      cursor: url("/itgoesdeeper/assets/cursor.png"), auto;
+      overflow-x: hidden;
+    }
+
+    .frameframe {
+      display: flex;
+      flex-wrap: wrap;
+      height: auto;
+      padding-bottom: 23px;
+      image-rendering: pixelated;
+      align-items: center;
+      height: auto;
+      max-width: 1080px;
+      width: auto;
+      margin: 16px auto;
+      margin-bottom: -42px;
+      overflow: visible;
+      border: dotted 1px #f11;
+      outline: double 2px #100;
+      background-color: #200000;
+      box-shadow: inset 0px 2px 13px;
+    }
+
+    .charTitle {
+      text-align: center;
+      background-color: #200;
+      color: white;
+      text-shadow: #700 0px 2px 8px;
+      height: 18px;
+      border: solid black 2px;
+      font-weight: bold;
+    }
+
+    .charframe {
+      width: 160px;
+      margin-right: 28px;
+      overflow: hidden;
+      font-size: 16px !important;
+      font-family: 'Franklin Gothic Medium' !important;
+      position: relative;
+      border: 1px solid #500000;
+      box-shadow: 0px 6px 9px #0004;
+      padding-inline: 3px;
+      line-height: 1.1 !important;
+      margin: auto;
+      margin-top: 43px;
+      scale: 0.96
+    }
+
+    .charframe:hover {
+      transform: translateY(-2px) scale(1.023);
+    }
+
+    .charframe img {
+      width: 170px;
+      margin-left: -3px;
+    }
+
+    .charframe:hover .charTitle {
+      border: solid 2px yellow;
+      text-shadow: #faa 0px 2px 8px;
+      cursor: url("/itgoesdeeper/assets/cursorclick.png"), auto;
+    }
+
+    .charframe img {
+      cursor: url("/itgoesdeeper/assets/cursorclick.png"), auto;
+    }
+
+    .cat-text {
+      font-size: 24px;
+      color: #f11;
+      width: 1080px;
+      margin: auto auto;
+      margin-top: 28px;
+      letter-spacing: -3px;
+      text-shadow: 0px 4px 3px #000;
+    }
+
+    .textframe {
+      height: 90px;
+      width: 1080px;
+      margin: 36px auto;
+      margin-bottom: -20px;
+      background-color: #200;
+      border: solid 4px;
+    }
+</style>
+</html>

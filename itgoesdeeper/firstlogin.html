@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Welcome</title>
+</head>
+<body>
+    <div class="welcome-warning">
+        <div class="abs-h1"><h1>itgoesDEEPER</h1></div>
+        <div class="warning-welcome-text">
+            <div class="warning-text">
+                <p>Welcome to 'itgoesdeeper', this website (arg) is not for the faint of heart and is designed for a mature
+                    audience only.</p>
+                <p>This website contains mentions of sensitive topics like gore, death, torture, family relation issues, etc.
+                </p>
+                <p>Please press the 'Proceed' button below to agree to this warning.<br>Or close this website (Ctrl + W) to
+                    leave.</p>
+            </div>
+        </div>
+        <div class="welcome-proceed-button">
+            <button type="button" onclick="window.location.href='index.html';">Proceed</button>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        background-image: url("assets/background-general.svg");
+    }
+</style>
+<script>
+    const bga = new Audio('assets/aud/AMB1.mp3');
+    bga.loop = true;
+    bga.play();
+</script>
+</html>
