@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<?xml encoding="utf-8" ?>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8">
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <title>TELEPHONE</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            cursor: url("assets/cursor.png"), auto;
+        }
+
+        #frame {
+            width: 706px;
+            height: 706px;
+            overflow: hidden;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+        }
+
+        .clickable {
+            cursor: pointer;
+            cursor: url("assets/cursorclick.png"), auto;
+        }
+
+        #phone {
+            width: 706px;
+            height: 706px;
+            background: url("assets/phone/phone.png");
+            filter: brightness(1.4);
+            transform: translateX(-23px) translateY(12px) scale(0.92);
+        }
+
+        .btn {
+            transform: skew(-5deg);
+            rotate: 20deg;
+            position: absolute;
+            opacity: 0;
+            width: fit-content;
+            user-select: none;
+        }
+
+        .btn:active {
+            opacity: 1;
+        }
+
+        #alone {
+            position: fixed;
+            z-index: 12;
+            width: 100vw;
+            height: 1-0vh;
+            top: 0;
+            background: #000a;
+            line-height: 97vh;
+            color: #fff;
+            font-size: 40px;
+            margin: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <div id="alone" style="display: none;">
+        <span id="shakespan">the quiet has taken over</span>
+        <style>
+            .letter {
+                display: inline-block;
+                position: relative;
+                transition: all ease 32ms;
+                user-select: none;
+            }
+        </style>
+        <script>
+            var shakespan = document.getElementById("shakespan");
+            var text = shakespan.textContent.trim();
+            var newText = '';
+
+            function updatemargins() {
+                for (var i = 0; i < text.length; i++) {
+                    var leftr = (Math.random() * 0.8 - 0.3) + 'px';
+                    var rightr = (Math.random() * 0.3 - 0.3) + 'px';
+                    var topr = (Math.random() * 1.3 - 0.1) + 'px';
+                    var rotr = (Math.random() * 12.3 - 7.1) + 'deg';
+                    var lspan = document.getElementById("letter" + i);
+                    lspan.style.marginLeft = leftr;
+                    lspan.style.marginRight = rightr;
+                    lspan.style.top = topr;
+                    lspan.style.rotate = rotr;
+                }
+            }
+            for (var i = 0; i < text.length; i++) {
+                newText += '<span id="letter' + i + '" class="letter">' + text.charAt(i) + '';
+            }
+            shakespan.innerHTML = newText;
+            setInterval(updatemargins, 128);
+        </script>
+    </div>
+    <div id="frame">
+        <div id="phone">
+            <div class="btn clickable" style="left: 370px; top: 291px;" id="01"><img src="assets/phone/phone1.png">
+            </div>
+            <div class="btn clickable" style="left: 407px; top: 305px;" id="02"><img src="assets/phone/phone2.png">
+            </div>
+            <div class="btn clickable" style="left: 444px; top: 319.7px;" id="03"><img
+                    src="assets/phone/phone3.png"></div>
+            <div class="btn clickable" style="left: 359px; top: 313px;" id="04"><img src="assets/phone/phone4.png">
+            </div>
+            <div class="btn clickable" style="left: 396px; top: 329px;" id="05"><img src="assets/phone/phone5.png">
+            </div>
+            <div class="btn clickable" style="left: 433px; top: 343px;" id="06"><img src="assets/phone/phone6.png">
+            </div>
+            <div class="btn clickable" style="left: 348px; top: 337px;" id="07"><img src="assets/phone/phone7.png">
+            </div>
+            <div class="btn clickable" style="left: 385px; top: 353px;" id="08"><img src="assets/phone/phone8.png">
+            </div>
+            <div class="btn clickable" style="left: 421px; top: 367px;" id="09"><img src="assets/phone/phone9.png">
+            </div>
+            <div class="btn clickable" style="left: 336px; top: 361px;" id="10"><img src="assets/phone/phonestar.png">
+            </div>
+            <div class="btn clickable" style="left: 373px; top: 376px;" id="11"><img src="assets/phone/phone0.png">
+            </div>
+            <div class="btn clickable" style="left: 410px; top: 392px;" id="12"><img src="assets/phone/phonepound.png">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<html>
+<script>
+    const amb2 = new Audio('https://nez.fyi/sml-assets/rumble.ogg');
+    amb2.play();
+    amb2.volume = 0.0;
+    amb2.loop = true;
+    const amb = new Audio('https://nez.fyi/sml-assets/phoneroom2.ogg');
+    amb.play();
+    amb.loop = true;
+    let intpress = 0;
+
+    function beep(id) {
+        const audio = new Audio(`assets/phone/aud/${id}.ogg`);
+        audio.play();
+
+        function stop() {
+            audio.pause();
+            document.removeEventListener('mouseup', stop);
+            document.removeEventListener('mouseout', stop);
+        }
+        document.addEventListener('mouseup', stop);
+        document.addEventListener('mouseout', stop);
+        intpress++;
+        if (intpress % 10 === 0) {
+            setTimeout(() => {
+                document.getElementById('alone').style.display = 'block';
+                amb2.volume = 0.9;
+                amb.volume = 0.1;
+            }, 256);
+            setTimeout(() => {
+                document.getElementById('alone').style.display = 'none';
+                amb2.volume = 0.0;
+                amb.volume = 1;
+            }, 2048);
+        }
+    }
+    for (let i = 1; i <= 12; i++) {
+        const id = i.toString().padStart(2, '0');
+        const button = document.getElementById(id);
+        button.addEventListener('mousedown', () => beep(id));
+        button.addEventListener('touchstart', () => beep(id));
+    }
+</script>
+
+
+</html>

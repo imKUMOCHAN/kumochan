@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KUMOCHAN ♪</title>
+</head>
+<body style="margin:0;background:#150342;">
+    <audio id="bgm" src="/web-assets/aud/newerlook.mp3" loop autoplay></audio>
+    <script>
+        // This window exists ONLY to play the background loop.
+        // It never navigates, so the audio is never torn down.
+        const a = document.getElementById('bgm');
+        a.volume = 0.2;
+        function tryPlay() { a.play().catch(() => {}); }
+        tryPlay();
+        // If the browser blocks autoplay, start on the first interaction here.
+        window.addEventListener('click', tryPlay, { once: true });
+        window.addEventListener('keydown', tryPlay, { once: true });
+    </script>
+</body>
+</html>

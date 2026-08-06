@@ -1,0 +1,36 @@
+body {
+    cursor: url("/web-assets/cursor.png"), auto;
+    background-color: #150342;
+    color: wheat;
+}
+
+a {
+    cursor: url("/web-assets/cursorclick.png"), auto;
+}
+
+.text-field {
+
+}
+
+p {
+        white-space: pre;
+        display: block;
+        margin: 1em auto;
+        text-align: center;
+        font-size: large;
+        max-width: 800px;
+        max-height: 1000px;
+        text-shadow: 
+            -3px -3px 0 black,
+            3px -3px 0 black,
+            -3px  3px 0 black,
+            3px  3px 0 black;
+}
+
+marquee {
+    text-shadow: 
+            -3px -3px 0 black,
+            3px -3px 0 black,
+            -3px  3px 0 black,
+            3px  3px 0 black;
+}
