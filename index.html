@@ -14,7 +14,48 @@
         projects, and daily life.
 
         I hope you may find some of these things as interesting as I do.
+
+        Please use the above toolbar to navigate the website !
     </p>
+    <p>
+        KUMOCHAN (born November 1st 2010), known as "雲ちゃん" (japanese for "Mrs. Cloud") is an autistic
+        female computer scientist,
+        best known as the creator of projects like <a href="https://github.com/UESI-org">UESI</a> (Unified Extensible System Interface), <a href="https://github.com/LARK-CPU">LARK</a>,
+        and the founder and (current) CEO of LCS
+
+        History
+        ------------------------------------------------------------------
+        She started working on the LARK project some time around the summer of 2024, as a hobby project
+        designed for everyday people.
+
+        Ever since the early 2020s KUMOCHAN has been very into older electronics, and computer systems.
+        And around early 2024 she started creation of a telephone network, inspired by 1970s telecommunication.
+        Most of KUMOCHAN's projects have something to do with computing systems, or analog electronics,
+        with the telephone project being an electromechanical concept.
+
+        Later in 2024, the idea of LARK came up, where KUMOCHAN's main idea was creating a
+        computer system/processor. She did not want this project to be "the best", 
+        neither did she wish to become rich or powerful from this, it was mainly an idea created
+        in her own words
+
+        <strong>"I'm reinventing the wheel for the love of the game, not trying to become rich or anything".</strong>
+        -KUMOCHAN 2025
+
+        Personal life
+        ------------------------------------------------------------------
+        KUMOCHAN has always been a very private person, with very little of her personal
+        information existing on the internet. Her real location, name, or face has ever
+        been shared by herself, and most of her personal information is hard to come by even when
+        looking for it. KUMOCHAN was born on the first of November 2010, in a birthing center that
+        does no longer exist.
+
+        Interests
+        ------------------------------------------------------------------
+        KUMOCHAN has been interested in many things over the few years she has
+        been active on the internet. One of the main things she's interested
+        in, are electronics, and computers. 
+            </p>
+    <div id="footer-container"></div>
 </body>
 <script>
     const ambbgm = new Audio('/web-assets/aud/newerlook.mp3');
@@ -25,5 +66,8 @@
     fetch('/header.html').then(response => response.text()).then(html => {
       document.getElementById('header-container').innerHTML = html;
     }).catch(error => console.error('error fetching header:', error));
+    fetch('/footer.html').then(response => response.text()).then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    }).catch(error => console.error('error fetching footer:', error));
 </script>
 </html>

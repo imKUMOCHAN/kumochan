@@ -28,6 +28,9 @@ p {
 }
 
 marquee {
+    text-align: center;
+    font-size: large;
+    max-height: 1000px;
     text-shadow: 
             -3px -3px 0 black,
             3px -3px 0 black,
