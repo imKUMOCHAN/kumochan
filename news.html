@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
     <title>News</title>
 </head>
 <body>
     <div id="header-container" style="height: 80px"></div>
-    <marquee>NEWS</marquee>
+    <div class="text">
+        <div id="current_date">
+            <script>
+                const options = { weekday: 'long', month: 'long', day: 'numeric' };
+                document.getElementById("current_date").innerHTML = new Date().toLocaleDateString('en-US', options);
+            </script>
+        </div>
+        <p>---------- NEWS ----------</p>
+        <hr>
+    </div>
+    <marquee>
+        | Website has been updated from
+        only the arg, to a more personal one |
+    </marquee>
+    <!---->
+    <marquee>
+        ----------------------------------------------------------------------------------------------------------------
+    </marquee>
+    <!---->
+    <marquee>
+        | News room added for future news and updates
+        on both my personal projects, but also the
+        website itself |
+    </marquee>
+    <div id="footer-container"></div>
 </body>
 <script>
     const ambbgm = new Audio('/web-assets/aud/newerlook.mp3');
@@ -19,5 +42,53 @@
     fetch('/header.html').then(response => response.text()).then(html => {
       document.getElementById('header-container').innerHTML = html;
     }).catch(error => console.error('error fetching header:', error));
+    fetch('/footer.html').then(response => response.text()).then(html => {
+      document.getElementById('footer-container').innerHTML = html;
+    }).catch(error => console.error('error fetching footer:', error));
 </script>
+<style>
+    body {
+        cursor: url("/web-assets/cursor.png"), auto;
+        background-color: #150342;
+        color: wheat;
+    }
+
+    a {
+        cursor: url("/web-assets/cursorclick.png"), auto;
+    }
+
+    .current_date {
+        font-size: x-small;
+        text-align: left;
+    }
+
+    .text-field {
+
+    }
+
+    .text p {
+            white-space: pre;
+            display: block;
+            margin: 1em auto;
+            text-align: center;
+            font-size: large;
+            max-width: 800px;
+            max-height: 1000px;
+            text-shadow: 
+                -3px -3px 0 black,
+                3px -3px 0 black,
+                -3px  3px 0 black,
+                3px  3px 0 black;
+    }
+
+    marquee {
+        font-size: large;
+        max-height: 1000px;
+        text-shadow: 
+                -3px -3px 0 black,
+                3px -3px 0 black,
+                -3px  3px 0 black,
+                3px  3px 0 black;
+    }
+</style>
 </html>
