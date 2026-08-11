@@ -4,11 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/wiiroom/style.css">
-    <title>Document</title>
+    <title>Wii Room</title>
 </head>
 <body>
     <div class="scanlines">
         <div class="jpg"></div>
     </div>
 </body>
+<script>
+    const ambbgm = new Audio('/web-assets/aud/wiisleepmix.mp3');
+    ambbgm.volume = 0.6;
+    ambbgm.play();
+    ambbgm.loop = true;
+</script>
 </html>
